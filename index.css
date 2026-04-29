@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+  --beige: #F5EDE3;
+  --cream: #FAF6F1;
+  --ivory: #FFFDF9;
+  --blush: #E8C4B8;
+  --blush-light: #F2DDD5;
+  --terracotta: #C4856C;
+  --terracotta-dark: #A86B53;
+  --rose: #D4A093;
+  --cafe: #8B6F5E;
+  --gold: #C9A96E;
+  --text-dark: #3D2E24;
+  --text-body: #5C4A3E;
+  --text-light: #8B7668;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid rgba(139, 111, 94, 0.22);
+  background: rgba(255, 253, 249, 0.94);
+  color: var(--text-dark);
+  border-radius: 18px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.form-control:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(196, 133, 108, 0.14);
+  background: var(--ivory);
+}
+
+.form-label {
+  display: block;
+  color: var(--text-body);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
